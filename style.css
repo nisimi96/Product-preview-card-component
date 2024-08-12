@@ -1,0 +1,213 @@
+:root {
+    --cream: #F2EAE2;
+    --green: #3D8168;
+    --deep-green: #1A4032;
+    --light-grey: #6C7289;
+    --dark: #1C232B;
+    --white: #FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: initial;
+}
+
+.fraunces {
+    font-family: "Fraunces", serif;
+}
+
+.Montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* display block to mobile picture */ 
+
+.product-mobile {
+    display: none;
+}
+
+/* main */
+body{
+    height: 100vh;
+    width: 100vw;
+    background: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cards-container {
+    height: 450px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+    background: var(--white);
+}
+
+
+/* image side */
+
+.image-container {
+    width: 300px;
+    height: 100%;
+    
+}
+
+.product {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px 0 0 10px;
+}
+
+/* white side */ 
+.white-side {
+    padding: 32px 32px;
+}
+.top-white-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    margin-bottom: 29px;
+}
+
+.small-title {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 5px;
+    color: var(--light-grey); 
+    margin-bottom: 20px;   
+}
+
+.main-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 32px;
+    color: var(--dark);    
+    width: 75%;
+    margin-bottom: 24px;
+}
+
+.text-p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;    
+    color: var(--light-grey);
+    width: 237px;
+}
+
+
+/* mid white card  or prices and numbers area */
+
+.prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 19px;
+    width: 194px;
+    margin-bottom: 30px;
+}
+
+.main-price {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px;
+    color: var(--green);
+
+}
+
+.was-price {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px; /* 176.923% */
+    text-decoration-line: line-through;
+    color: var(--light-grey);
+}
+
+/* button styling */
+
+.button-style {
+    width: 236px;
+    height: 48px;
+    background: var(--green);
+    border-radius: 8px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 11.615px;
+}
+
+.button-style:hover {
+    cursor: pointer;
+    background: var(--deep-green);
+}
+
+.button-p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--white);    
+}
+
+@media screen and (max-width: 650px) {
+    .product {
+        display: none;
+    }
+    .product-mobile {
+        display: block;
+        width: 343px;
+        height: 240px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        width: 343px;
+        height: 611px;
+        padding: 0;
+        
+    }
+    .image-container {
+        width: 343px;
+        height: 240px;
+        
+
+    }
+
+    .white-side {
+        width: 100%;
+        height: 50%;
+        padding: 24px;
+        margin-bottom: 20px;
+    }
+
+    .top-white-card {
+        margin-bottom: 20px;
+    }
+    .small-title {
+        margin-bottom: 12px;
+    }
+    .main-title {
+        margin-bottom: 16px;
+        width: 295px;
+    }
+    .text-p {
+        width: 295px;
+    }
+    .button-style {
+        width: 295px;
+    }
+}
